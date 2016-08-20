@@ -1,0 +1,21 @@
+{
+  "name": "relative-require",
+  "main": "./lib/main",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "private": true,
+  "repository": "https://github.com/stuwilliams47/relative-require",
+  "engines": {
+    "atom": ">0.61.0"
+  },
+  "author": "Stuart Williams",
+  "license": "ISC",
+  "dependencies": {
+    "q": "^1.4.1",
+    "ramda": "^0.22.1"
+  },
+  "devDependencies": {
+    "eslint-config-standard": "^5.3.1"
+  }
+}
