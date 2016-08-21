@@ -1,0 +1,6 @@
+{
+  "atom-text-editor": {
+    "ctrl-alt-r": "relative-require:require",
+    "ctrl-alt-e": "relative-require:import"
+  }
+}
