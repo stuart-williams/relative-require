@@ -2,14 +2,19 @@
   "name": "relative-require",
   "main": "./lib/main",
   "version": "0.0.9",
-  "description": "",
-  "license": "ISC",
+  "description": "Injects module require statements with the correct relative require path",
+  "keywords": [
+    "javascript",
+    "relative",
+    "require"
+  ],
+  "author": "Stuart Williams <stuwilliams47@gmail.com>",
+  "license": "MIT",
   "private": true,
   "repository": "https://github.com/stuwilliams47/relative-require",
   "engines": {
     "atom": ">0.61.0"
   },
-  "author": "Stuart Williams",
   "dependencies": {
     "lodash": "^4.15.0",
     "q": "^1.4.1"
