@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/stuwilliams47/relative-require.png?label=ready&title=Ready)](https://waffle.io/stuwilliams47/relative-require)
 ### Relative Require
 
 Injects module require statements with the correct relative require path
