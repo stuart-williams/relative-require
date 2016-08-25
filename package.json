@@ -16,7 +16,8 @@
     "atom": ">0.61.0"
   },
   "scripts": {
-    "test": "atom --test spec"
+    "test": "atom --test spec",
+    "jasmine": "./node_modules/.bin/jasmine-node spec"
   },
   "dependencies": {
     "lodash": "^4.15.0",
