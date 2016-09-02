@@ -23,3 +23,8 @@ describe('pathToStatement function', () => {
     })
   })
 })
+
+describe('pathsToStatements function', () => {
+  // const convert = require('../lib/path-to-statement').pathsToStatements
+  // Check it dedupes
+})

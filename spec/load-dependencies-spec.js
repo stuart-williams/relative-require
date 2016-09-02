@@ -1,8 +1,8 @@
-var path = require('path')
-var loadDependencies = require('../lib/load-dependencies')
-var projectPath = path.join(__dirname, 'mock-project')
+const path = require('path')
+const loadDependencies = require('../lib/load-dependencies')
+const projectPath = path.join(__dirname, 'mock-project')
 
-describe('load dependencies function', () => {
+describe('loadDependencies function', () => {
   it('should return an array of dependencies from the package.json in the project root', () => {
     waitsForPromise(() =>
       loadDependencies(projectPath).then((dependencies) => {

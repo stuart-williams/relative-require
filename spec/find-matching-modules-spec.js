@@ -1,6 +1,6 @@
-var path = require('path')
-var findMatchingModules = require('../lib/find-matching-modules')
-var projectPath = path.join(__dirname, 'mock-project')
+const path = require('path')
+const findMatchingModules = require('../lib/find-matching-modules')
+const projectPath = path.join(__dirname, 'mock-project')
 
 describe('findMatchingModules function', () => {
   it('should find the expected module paths', () => {
