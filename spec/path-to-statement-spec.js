@@ -3,12 +3,12 @@ describe('pathToStatement function', () => {
 
   describe('with type `require`', () => {
     it('should create the expected relative require statement', () => {
-      expect(convert('require', '/foo')('/foo/bar.js')).toBe('var bar = require(\'./bar\')')
-      expect(convert('require', '/foo/bar')('/foo/bar.js')).toBe('var bar = require(\'../bar\')')
-      expect(convert('require', '/foo/bar')('/foo/baz/bar.js')).toBe('var bar = require(\'../baz/bar\')')
+      expect(convert('require', '/foo')('/foo/bar.js')).toBe('const bar = require(\'./bar\')')
+      expect(convert('require', '/foo/bar')('/foo/bar.js')).toBe('const bar = require(\'../bar\')')
+      expect(convert('require', '/foo/bar')('/foo/baz/bar.js')).toBe('const bar = require(\'../baz/bar\')')
     })
     it('should camelCase the variable name', () => {
-      expect(convert('require', '/foo')('/foo/bar-baz.js')).toBe('var barBaz = require(\'./bar-baz\')')
+      expect(convert('require', '/foo')('/foo/bar-baz.js')).toBe('const barBaz = require(\'./bar-baz\')')
     })
   })
 
