@@ -16,7 +16,7 @@ Highlight the module you want to import and hit `ctrl-alt-r` to inject the requi
 
 Right click a module file from the tree view and select 'Relative Require'
 
-![Demo](https://github.com/stuwilliams47/relative-require/blob/master/gifs/menu.gif)
+![Demo](https://s10.postimg.org/pnuwb89uh/menu.gif)
 
 ## Features
 
