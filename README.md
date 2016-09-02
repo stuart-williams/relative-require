@@ -21,6 +21,6 @@ Right click a module file from the tree view and select 'Relative Require'
 ## Features
 
 * Require project modules with correct relative path
-* Require from your projects package.json dependencies
+* Require from your projects `package.json` dependencies
 * Infers the import statement syntax from the active files contents i.e. `require` or `import`
 * Right click a file in the tree view to import
