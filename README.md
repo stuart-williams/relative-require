@@ -10,7 +10,7 @@ Injects module require statements with the correct relative require path
 
 Highlight the module you want to import and hit `ctrl-alt-r` to inject the require statement
 
-![Demo](https://github.com/stuwilliams47/relative-require/blob/master/gifs/editor.gif)
+![Demo](https://s12.postimg.org/ifcu8bvnh/editor.gif)
 
 ### From the Tree View
 
