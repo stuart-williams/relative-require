@@ -20,6 +20,8 @@
     "jasmine": "./node_modules/.bin/jasmine-node spec"
   },
   "dependencies": {
+    "acorn": "^3.3.0",
+    "ast-types": "^0.9.0",
     "lodash": "^4.15.0",
     "q": "^1.4.1",
     "ramda": "^0.22.1"
