@@ -1,7 +1,7 @@
 {
   "name": "relative-require",
   "main": "./lib/main",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Injects module require statements with the correct relative require path",
   "keywords": [
     "javascript",
