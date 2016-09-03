@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/stuwilliams47/relative-require.svg?branch=master)](https://travis-ci.org/stuwilliams47/relative-require) [![Stories in Ready](https://badge.waffle.io/stuwilliams47/relative-require.png?label=ready&title=Ready)](https://waffle.io/stuwilliams47/relative-require)
-
-### Relative Require
+# Relative Require [![Build Status](https://travis-ci.org/stuwilliams47/relative-require.svg?branch=master)](https://travis-ci.org/stuwilliams47/relative-require) [![Stories in Ready](https://badge.waffle.io/stuwilliams47/relative-require.png?label=ready&title=Ready)](https://waffle.io/stuwilliams47/relative-require)
 
 Injects module require statements with the correct relative require path
 
