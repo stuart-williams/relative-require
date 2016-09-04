@@ -18,7 +18,7 @@ echo '{"dependencies":{"foo":"0.0.1", "bar":"0.0.2", "baz":"0.0.3"}}' >> mock-pr
 
 mkdir -p mock-project/editor/a
 touch mock-project/editor/active.js
-echo 'target' >> mock-project/editor/active.js
-touch mock-project/editor/target.js
+touch mock-project/editor/target1.js
+touch mock-project/editor/target2.js
 touch mock-project/editor/package.json
 echo '{"dependencies":{"foo":"0.0.1", "bar":"0.0.2", "baz":"0.0.3"}}' >> mock-project/editor/package.json
