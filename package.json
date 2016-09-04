@@ -17,7 +17,7 @@
   },
   "scripts": {
     "pretest": "sh ./scripts/mock-project.sh",
-    "test": "atom --test ./test/spec",
+    "test": "atom --test ./spec",
     "posttest": "del ./.mock-project"
   },
   "dependencies": {

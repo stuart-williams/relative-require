@@ -2,7 +2,9 @@ echo 'Generating mock project...'
 mkdir -p .mock-project/one/two/three
 touch .mock-project/foo-bar.js
 touch .mock-project/foo-bar.json
+touch .mock-project/bar-baz.js
 touch .mock-project/one/fooBar.jsx
+touch .mock-project/one/barBaz.js
 touch .mock-project/one/two/foo_bar.js
 touch .mock-project/one/two/three/foo-bar.js
 touch .mock-project/one/two/three/foo-bar.py
