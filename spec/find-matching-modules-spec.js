@@ -14,16 +14,4 @@ describe('findMatchingModules function', () => {
         ].sort())
       }))
   })
-  it('should match files using camel, kebab and snake case', () => {
-    const casesPath = path.join(projectPath, 'cases')
-
-    waitsForPromise(() =>
-      findMatchingModules(casesPath, 'fooBar').then((modules) => {
-        expect(modules.sort()).toEqual([
-          path.join(casesPath, 'foo-bar.js'),
-          path.join(casesPath, 'fooBar.js'),
-          path.join(casesPath, 'foo_bar.js')
-        ].sort())
-      }))
-  })
 })

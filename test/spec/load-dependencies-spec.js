@@ -1,6 +1,5 @@
-const path = require('path')
-const loadDependencies = require('../lib/load-dependencies')
-const projectPath = path.join(__dirname, 'mock-project')
+const loadDependencies = require('../../lib/load-dependencies')
+const projectPath = require('../helpers/mock-project-path')
 
 describe('loadDependencies function', () => {
   it('should return an array of dependencies from the package.json in the project root', () => {

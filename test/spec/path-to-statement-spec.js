@@ -1,5 +1,5 @@
 describe('pathToStatement function', () => {
-  const convert = require('../lib/path-to-statement').pathToStatement
+  const convert = require('../../lib/path-to-statement').pathToStatement
 
   describe('with type `require`', () => {
     it('should create the expected relative require statement', () => {
