@@ -1,13 +1,24 @@
 echo 'Generating mock project...'
-mkdir -p mock-project/one/two/three
-touch mock-project/foo-bar.js
-touch mock-project/foo-bar.json
-touch mock-project/bar-baz.js
-touch mock-project/one/fooBar.jsx
-touch mock-project/one/barBaz.js
-touch mock-project/one/two/foo_bar.js
-touch mock-project/one/two/three/foo-bar.js
-touch mock-project/one/two/three/foo-bar.py
-rm mock-project/package.json
+mkdir -p mock-project
+
 touch mock-project/package.json
 echo '{"dependencies":{"foo":"0.0.1", "bar":"0.0.2", "baz":"0.0.3"}}' >> mock-project/package.json
+
+mkdir -p mock-project/walk/a/b
+touch mock-project/walk/foo-bar.js
+touch mock-project/walk/bar-baz.js
+touch mock-project/walk/a/foo-bar.jsx
+touch mock-project/walk/a/foo-bar.json
+touch mock-project/walk/a/foo-bar.py
+touch mock-project/walk/a/b/foo-bar.js
+touch mock-project/walk/a/b/fooBar.js
+touch mock-project/walk/a/b/foo_bar.js
+touch mock-project/walk/package.json
+echo '{"dependencies":{"foo":"0.0.1", "bar":"0.0.2", "baz":"0.0.3"}}' >> mock-project/walk/package.json
+
+mkdir -p mock-project/editor/a
+touch mock-project/editor/active.js
+echo 'target' >> mock-project/editor/active.js
+touch mock-project/editor/target.js
+touch mock-project/editor/package.json
+echo '{"dependencies":{"foo":"0.0.1", "bar":"0.0.2", "baz":"0.0.3"}}' >> mock-project/editor/package.json
