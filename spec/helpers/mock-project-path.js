@@ -1,2 +1,2 @@
 const path = require('path')
-module.exports = path.resolve(__dirname, '..', '..', '.mock-project')
+module.exports = path.resolve(__dirname, '..', '..', 'mock-project')

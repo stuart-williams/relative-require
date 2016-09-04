@@ -16,8 +16,8 @@
     "atom": ">0.61.0"
   },
   "scripts": {
-    "test": "sh ./scripts/mock-project.sh && atom --test ./spec",
-    "posttest": "del ./.mock-project"
+    "pretest": "del ./mock-project/* && sh ./scripts/mock-project.sh",
+    "test": "atom --test ./spec"
   },
   "dependencies": {
     "acorn": "^3.3.0",
