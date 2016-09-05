@@ -25,6 +25,12 @@ describe('pathToStatement function', () => {
 })
 
 describe('pathsToStatements function', () => {
-  // const convert = require('../lib/path-to-statement').pathsToStatements
-  // Check it dedupes
+  const convert = require('../lib/path-to-statement').pathsToStatements
+
+  it('should dedupe modules with the same path after removal of extension', () => {
+    expect(convert('require', '/foo', [ '/foo/bar.js', '/foo/bar.json', '/foo/baz.js' ])).toEqual([
+      'const bar = require(\'./bar\')',
+      'const baz = require(\'./baz\')'
+    ])
+  })
 })
