@@ -3,10 +3,6 @@ const textEditorRequire = require('../lib/text-editor-require')
 const mockProjectPath = require('./helpers/mock-project-path')
 const projectPath = path.join(mockProjectPath, 'editor')
 
-function clean (input) {
-  return input.replace(/\n/g, '')
-}
-
 describe('text editor require', () => {
   atom.project.relativizePath = () => [ projectPath ]
 
@@ -22,7 +18,7 @@ describe('text editor require', () => {
     waitsForPromise(() =>
       textEditorRequire(editor, ['target1'], { type: 'require', pos: 0 })
         .then(() => {
-          expect(clean(editor.getText())).toBe('const target1 = require(\'./target1\')')
+          expect(editor.getText()).toBe('const target1 = require(\'./target1\')')
         }))
   })
 
@@ -30,7 +26,7 @@ describe('text editor require', () => {
     waitsForPromise(() =>
       textEditorRequire(editor, ['target1', 'target2'], { type: 'require', pos: 0 })
         .then(() => {
-          expect(clean(editor.getText())).toBe(
+          expect(editor.getText()).toBe(
             'const target1 = require(\'./target1\')const target2 = require(\'./target2\')'
           )
         }))
@@ -40,7 +36,7 @@ describe('text editor require', () => {
     waitsForPromise(() =>
       textEditorRequire(editor, ['foo'], { type: 'require', pos: 0 })
         .then(() => {
-          expect(clean(editor.getText())).toBe('const foo = require(\'foo\')')
+          expect(editor.getText()).toBe('const foo = require(\'foo\')')
         }))
   })
 
@@ -48,7 +44,7 @@ describe('text editor require', () => {
     waitsForPromise(() =>
       textEditorRequire(editor, ['foo', 'target1'], { type: 'require', pos: 0 })
         .then(() => {
-          expect(clean(editor.getText())).toBe(
+          expect(editor.getText()).toBe(
             'const foo = require(\'foo\')const target1 = require(\'./target1\')'
           )
         }))
@@ -58,7 +54,7 @@ describe('text editor require', () => {
     waitsForPromise(() =>
       textEditorRequire(editor, ['target1'], { type: 'import', pos: 0 })
         .then(() => {
-          expect(clean(editor.getText())).toBe('import target1 from \'./target1\'')
+          expect(editor.getText()).toBe('import target1 from \'./target1\'')
         }))
   })
 })
