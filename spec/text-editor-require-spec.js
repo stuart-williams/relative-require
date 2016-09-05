@@ -1,4 +1,5 @@
 const path = require('path')
+const os = require('os')
 const textEditorRequire = require('../lib/text-editor-require')
 const mockProjectPath = require('./helpers/mock-project-path')
 const projectPath = path.join(mockProjectPath, 'editor')
@@ -18,7 +19,7 @@ describe('text editor require', () => {
     waitsForPromise(() =>
       textEditorRequire(editor, ['target1'], { type: 'require', pos: 0 })
         .then(() => {
-          expect(editor.getText()).toBe('const target1 = require(\'./target1\')')
+          expect(editor.getText()).toBe(`const target1 = require('./target1')${os.EOL}`)
         }))
   })
 
@@ -27,7 +28,7 @@ describe('text editor require', () => {
       textEditorRequire(editor, ['target1', 'target2'], { type: 'require', pos: 0 })
         .then(() => {
           expect(editor.getText()).toBe(
-            'const target1 = require(\'./target1\')const target2 = require(\'./target2\')'
+            `const target1 = require('./target1')${os.EOL}const target2 = require('./target2')${os.EOL}`
           )
         }))
   })
@@ -36,7 +37,7 @@ describe('text editor require', () => {
     waitsForPromise(() =>
       textEditorRequire(editor, ['foo'], { type: 'require', pos: 0 })
         .then(() => {
-          expect(editor.getText()).toBe('const foo = require(\'foo\')')
+          expect(editor.getText()).toBe(`const foo = require('foo')${os.EOL}`)
         }))
   })
 
@@ -45,7 +46,7 @@ describe('text editor require', () => {
       textEditorRequire(editor, ['foo', 'target1'], { type: 'require', pos: 0 })
         .then(() => {
           expect(editor.getText()).toBe(
-            'const foo = require(\'foo\')const target1 = require(\'./target1\')'
+            `const foo = require('foo')${os.EOL}const target1 = require('./target1')${os.EOL}`
           )
         }))
   })
@@ -54,7 +55,7 @@ describe('text editor require', () => {
     waitsForPromise(() =>
       textEditorRequire(editor, ['target1'], { type: 'import', pos: 0 })
         .then(() => {
-          expect(editor.getText()).toBe('import target1 from \'./target1\'')
+          expect(editor.getText()).toBe(`import target1 from './target1'${os.EOL}`)
         }))
   })
 })
