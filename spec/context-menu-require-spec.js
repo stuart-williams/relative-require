@@ -20,7 +20,7 @@ describe('context menu require', () => {
       type: 'require',
       pos: 0
     })
-    expect(editor.getText()).toBe(`${os.EOL}const target1 = require('./target1')`)
+    expect(editor.getText()).toBe(`const target1 = require('./target1')${os.EOL}`)
   })
 
   it('should inject the correct statment when source type is `import`', () => {
@@ -30,6 +30,6 @@ describe('context menu require', () => {
       type: 'import',
       pos: 0
     })
-    expect(editor.getText()).toBe(`${os.EOL}import target1 from './target1'`)
+    expect(editor.getText()).toBe(`import target1 from './target1'${os.EOL}`)
   })
 })
