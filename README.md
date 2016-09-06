@@ -22,5 +22,5 @@ Right click a module file from the tree view and select 'Relative Require'
 * Require from your projects `package.json` dependencies
 * Infers the import statement syntax from the active files contents i.e. `require` or `import`
 * Import multiple modules
-* Import native node modules; fs, path etc,
+* Import native node modules; `fs`, `path` etc,
 * Right click a file in the tree view to import
