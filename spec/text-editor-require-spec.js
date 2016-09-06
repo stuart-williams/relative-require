@@ -41,6 +41,14 @@ describe('text editor require', () => {
         }))
   })
 
+  it('should inject the correct statments native node modules', () => {
+    waitsForPromise(() =>
+      textEditorRequire(editor, ['fs', 'path'], { type: 'require', pos: 0 })
+        .then(() => {
+          expect(editor.getText()).toBe(`const fs = require('fs')${os.EOL}const path = require('path')${os.EOL}`)
+        }))
+  })
+
   it('should inject the correct statments for a mix of package.json dependencies and project modules', () => {
     waitsForPromise(() =>
       textEditorRequire(editor, ['foo', 'target1'], { type: 'require', pos: 0 })
