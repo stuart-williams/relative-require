@@ -19,7 +19,7 @@ describe('text editor require', () => {
     waitsForPromise(() =>
       textEditorRequire(editor, ['target1'], { type: 'require', pos: 0 })
         .then(() => {
-          expect(editor.getText()).toBe(`const target1 = require('./target1')${os.EOL}`)
+          expect(editor.getText()).toBe(`${os.EOL}const target1 = require('./target1')`)
         }))
   })
 
@@ -28,7 +28,7 @@ describe('text editor require', () => {
       textEditorRequire(editor, ['target1', 'target2'], { type: 'require', pos: 0 })
         .then(() => {
           expect(editor.getText()).toBe(
-            `const target1 = require('./target1')${os.EOL}const target2 = require('./target2')${os.EOL}`
+            `${os.EOL}const target1 = require('./target1')${os.EOL}const target2 = require('./target2')`
           )
         }))
   })
@@ -37,7 +37,7 @@ describe('text editor require', () => {
     waitsForPromise(() =>
       textEditorRequire(editor, ['foo'], { type: 'require', pos: 0 })
         .then(() => {
-          expect(editor.getText()).toBe(`const foo = require('foo')${os.EOL}`)
+          expect(editor.getText()).toBe(`${os.EOL}const foo = require('foo')`)
         }))
   })
 
@@ -46,7 +46,7 @@ describe('text editor require', () => {
       textEditorRequire(editor, ['foo', 'target1'], { type: 'require', pos: 0 })
         .then(() => {
           expect(editor.getText()).toBe(
-            `const foo = require('foo')${os.EOL}const target1 = require('./target1')${os.EOL}`
+            `${os.EOL}const foo = require('foo')${os.EOL}const target1 = require('./target1')`
           )
         }))
   })
@@ -55,7 +55,7 @@ describe('text editor require', () => {
     waitsForPromise(() =>
       textEditorRequire(editor, ['target1'], { type: 'import', pos: 0 })
         .then(() => {
-          expect(editor.getText()).toBe(`import target1 from './target1'${os.EOL}`)
+          expect(editor.getText()).toBe(`${os.EOL}import target1 from './target1'`)
         }))
   })
 })
