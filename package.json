@@ -11,7 +11,7 @@
   "author": "Stuart Williams <stuwilliams47@gmail.com>",
   "license": "MIT",
   "private": true,
-  "repository": "https://github.com/stuwilliams47/relative-require",
+  "repository": "https://github.com/stuart-williams/relative-require",
   "engines": {
     "atom": ">0.61.0"
   },
