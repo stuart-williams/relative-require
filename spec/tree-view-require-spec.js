@@ -1,7 +1,7 @@
 const path = require('path')
 const os = require('os')
 const mockProjectPath = require('./helpers/mock-project-path')
-const contextMenuRequire = require('../lib/context-menu-require')
+const treeViewRequire = require('../lib/tree-view-require')
 const projectPath = path.join(mockProjectPath, 'editor')
 
 describe('context menu require', () => {
@@ -14,7 +14,7 @@ describe('context menu require', () => {
   })
 
   it('should inject the correct statment when source type is `require`', () => {
-    contextMenuRequire(editor, [
+    treeViewRequire(editor, [
       path.join(projectPath, 'target1')
     ], {
       type: 'require',
@@ -24,7 +24,7 @@ describe('context menu require', () => {
   })
 
   it('should inject the correct statment when source type is `import`', () => {
-    contextMenuRequire(editor, [
+    treeViewRequire(editor, [
       path.join(projectPath, 'target1')
     ], {
       type: 'import',
