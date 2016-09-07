@@ -12,7 +12,7 @@ Drag and drop from the tree view or highlight and hit `ctrl-alt-r` to inject you
 
 * Import project modules with correct relative path
 * Import from your projects `package.json` dependencies
-* Import native node modules; `fs`, `path` etc,
+* Import native node modules; `fs`, `path` etc.
 * Infers the import statement syntax from the active files contents i.e. `require` or `import`
 * Drag and drop from tree view
 * Right click a file in the tree view to import
