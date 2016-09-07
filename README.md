@@ -4,23 +4,15 @@ Injects module require statements with the correct relative require path
 
 ## Usage
 
-### From the Editor
+Drag and drop from the tree view or highlight and hit `ctrl-alt-r` to inject your require statements
 
-Highlight one or more modules you want to import and hit `ctrl-alt-r` to inject the require statements
-
-![Demo](https://s13.postimg.org/rnstpvi13/relative_require_text_editor.gif)
-
-### From the Tree View
-
-Right click a module file from the tree view and select 'Relative Require'
-
-![Demo](https://s10.postimg.org/pnuwb89uh/menu.gif)
+![Demo](https://s13.postimg.org/4cvmzt2jb/editor_require.gif)
 
 ## Features
 
-* Require project modules with correct relative path
-* Require from your projects `package.json` dependencies
-* Infers the import statement syntax from the active files contents i.e. `require` or `import`
-* Import multiple modules
+* Import project modules with correct relative path
+* Import from your projects `package.json` dependencies
 * Import native node modules; `fs`, `path` etc,
+* Infers the import statement syntax from the active files contents i.e. `require` or `import`
+* Drag and drop from tree view
 * Right click a file in the tree view to import
