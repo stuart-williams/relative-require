@@ -4,15 +4,27 @@ Injects module require statements with the correct relative require path
 
 ## Usage
 
-Drag and drop from the tree view or highlight and hit `ctrl-alt-r` to inject your require statements
+**Drag & drop from the tree view**
 
-![Demo](https://s13.postimg.org/4cvmzt2jb/editor_require.gif)
+![Demo](https://s22.postimg.org/ea2m429ox/dragdrop.gif)
+
+**Right click from the tree view**
+
+![Demo](https://s21.postimg.org/i2jn8at8n/treeclick.gif)
+
+**Using the hotkey `ctrl-alt-r`**
+
+![Demo](https://s17.postimg.org/5s99zzwgv/hotkey.gif)
+
+**Right click in the editor**
+
+![Demo](https://s17.postimg.org/rzz4sda8f/editorclick.gif)
 
 ## Features
 
 * Import project modules with correct relative path
 * Import from your projects `package.json` dependencies
 * Import native node modules; `fs`, `path` etc.
-* Infers the import statement syntax from the active files contents i.e. `require` or `import`
+* Infers the import statement syntax (`require` or `import`) from the active file contents
 * Drag and drop from tree view
 * Right click a file in the tree view to import
