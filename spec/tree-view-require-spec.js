@@ -4,7 +4,7 @@ const mockProjectPath = require('./helpers/mock-project-path')
 const treeViewRequire = require('../lib/tree-view-require')
 const projectPath = path.join(mockProjectPath, 'editor')
 
-describe('context menu require', () => {
+describe('tree view require', () => {
   let editor = null
 
   beforeEach(() => {
@@ -15,21 +15,41 @@ describe('context menu require', () => {
 
   it('should inject the correct statment when source type is `require`', () => {
     treeViewRequire(editor, [
-      path.join(projectPath, 'target1')
+      path.join(projectPath, 'target1.js'),
+      path.join(projectPath, 'target2.jsx'),
+      path.join(projectPath, 'target3.json')
     ], {
       type: 'require',
       pos: 0
     })
-    expect(editor.getText()).toBe(`const target1 = require('./target1')${os.EOL}`)
+    expect(editor.getText()).toBe(
+      `const target1 = require('./target1')${os.EOL}const target2 = require('./target2')${os.EOL}const target3 = require('./target3')${os.EOL}`
+    )
   })
 
   it('should inject the correct statment when source type is `import`', () => {
     treeViewRequire(editor, [
-      path.join(projectPath, 'target1')
+      path.join(projectPath, 'target1.js'),
+      path.join(projectPath, 'target2.jsx'),
+      path.join(projectPath, 'target3.json')
     ], {
       type: 'import',
       pos: 0
     })
-    expect(editor.getText()).toBe(`import target1 from './target1'${os.EOL}`)
+    expect(editor.getText()).toBe(
+      `import target1 from './target1'${os.EOL}import target2 from './target2'${os.EOL}import target3 from './target3'${os.EOL}`
+    )
+  })
+
+  it('should inject the correct statments for files with a valid extension', () => {
+    treeViewRequire(editor, [
+      path.join(projectPath, 'target1.cson'),
+      path.join(projectPath, 'target2.coffee'),
+      path.join(projectPath, 'target3.py')
+    ], {
+      type: 'import',
+      pos: 0
+    })
+    expect(editor.getText()).toBe('')
   })
 })
