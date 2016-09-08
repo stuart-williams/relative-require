@@ -1,9 +1,14 @@
 const path = require('path')
 const findMatchingModules = require('../lib/find-matching-modules')
 const mockProjectPath = require('./helpers/mock-project-path')
+const config = require('../config')
 const projectPath = path.join(mockProjectPath, 'walk')
 
 describe('findMatchingModules function', () => {
+  beforeEach(() => {
+    atom.config.set('relative-require.excludeDirs', config.excludeDirs.default)
+  })
+
   it('should find the expected module paths', () => {
     waitsForPromise(() =>
       findMatchingModules(projectPath, ['fooBar']).then((modules) => {

@@ -12,6 +12,7 @@ describe('textEditorRequire function', () => {
 
   beforeEach(() => {
     atom.config.set('relative-require.omitExtensions', config.omitExtensions.default)
+    atom.config.set('relative-require.excludeDirs', config.excludeDirs.default)
     waitsForPromise(() => atom.workspace.open(path.join(projectPath, 'active.js')).then((e) => {
       editor = e
     }))

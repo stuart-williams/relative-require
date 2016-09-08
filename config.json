@@ -1,9 +1,16 @@
 {
   "omitExtensions": {
     "order": 1,
-    "title": "Omit file extension",
-    "description": "Omit the extension from the require path for specified file types.",
+    "title": "Omit file extensions",
+    "description": "Omit the extension from the require path for the following file types:",
     "type": "array",
     "default": ["js", "jsx", "json"]
+  },
+  "excludeDirs": {
+    "order": 2,
+    "title": "Exclude Directories",
+    "description": "Exclude the following directories from the module search:",
+    "type": "array",
+    "default": ["^\\.", "node_modules", "bower_components"]
   }
 }
