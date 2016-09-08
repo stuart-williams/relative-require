@@ -35,4 +35,11 @@ describe('analyseSource function', () => {
       pos: 70
     })
   })
+
+  it('should return the default values when the active file source cannot be parsed', () => {
+    expect(analyseSource('some invalid source')).toEqual({
+      type: 'require',
+      pos: 0
+    })
+  })
 })
