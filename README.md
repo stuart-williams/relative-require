@@ -14,7 +14,7 @@ Injects module require statements with the correct relative require path
 
 **Using the hotkey `ctrl-alt-r`**
 
-![Demo](https://s17.postimg.org/5s99zzwgv/hotkey.gif)
+![Demo](https://s12.postimg.org/5n24znmul/editorfuzzy.gif)
 
 **Right click in the editor**
 
