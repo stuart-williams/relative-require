@@ -1,0 +1,9 @@
+{
+  "omitExtensions": {
+    "order": 1,
+    "title": "Omit file extension",
+    "description": "Omit the extension from the require path for specified file types.",
+    "type": "array",
+    "default": ["js", "jsx", "json"]
+  }
+}
