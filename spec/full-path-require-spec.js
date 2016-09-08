@@ -1,10 +1,10 @@
 const path = require('path')
 const os = require('os')
 const mockProjectPath = require('./helpers/mock-project-path')
-const treeViewRequire = require('../lib/tree-view-require')
+const fullPathRequire = require('../lib/full-path-require')
 const projectPath = path.join(mockProjectPath, 'editor')
 
-describe('tree view require', () => {
+describe('fullPathRequire function', () => {
   let editor = null
 
   beforeEach(() => {
@@ -14,7 +14,7 @@ describe('tree view require', () => {
   })
 
   it('should inject the correct statment when source type is `require`', () => {
-    treeViewRequire(editor, [
+    fullPathRequire(editor, [
       path.join(projectPath, 'target1.js'),
       path.join(projectPath, 'target2.jsx'),
       path.join(projectPath, 'target3.json')
@@ -28,7 +28,7 @@ describe('tree view require', () => {
   })
 
   it('should inject the correct statment when source type is `import`', () => {
-    treeViewRequire(editor, [
+    fullPathRequire(editor, [
       path.join(projectPath, 'target1.js'),
       path.join(projectPath, 'target2.jsx'),
       path.join(projectPath, 'target3.json')
@@ -42,7 +42,7 @@ describe('tree view require', () => {
   })
 
   it('should inject the correct statments for files with a valid extension', () => {
-    treeViewRequire(editor, [
+    fullPathRequire(editor, [
       path.join(projectPath, 'target1.cson'),
       path.join(projectPath, 'target2.coffee'),
       path.join(projectPath, 'target3.py')
