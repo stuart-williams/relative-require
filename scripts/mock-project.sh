@@ -2,7 +2,7 @@ echo 'Generating mock project...'
 mkdir -p mock-project
 
 touch mock-project/package.json
-echo '{"dependencies":{"foo":"0.0.1", "bar":"0.0.2", "baz":"0.0.3"}}' >> mock-project/package.json
+echo '{"dependencies":{"foo":"0.0.1", "bar":"0.0.2", "baz":"0.0.3"}, "devDependencies": {"fooBar": "0.0.1"}}' >> mock-project/package.json
 
 mkdir -p mock-project/walk/a/b
 touch mock-project/walk/foo-bar.js
