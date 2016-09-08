@@ -38,8 +38,9 @@ describe('pathsToStatements function', () => {
   })
 
   it('should dedupe modules with the same path after removal of extension', () => {
-    expect(convert('require', '/foo', [ '/foo/bar.js', '/foo/bar.json', '/foo/baz.js' ])).toEqual([
+    expect(convert('require', '/foo', [ '/foo/bar.js', '/foo/bar.jsx', '/foo/bar.json', '/foo/baz.js' ])).toEqual([
       'const bar = require(\'./bar\')',
+      'const bar = require(\'./bar.json\')',
       'const baz = require(\'./baz\')'
     ])
   })

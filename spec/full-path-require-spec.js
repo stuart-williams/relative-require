@@ -25,7 +25,7 @@ describe('fullPathRequire function', () => {
       pos: 0
     })
     expect(editor.getText()).toBe(
-      `const target1 = require('./target1')${os.EOL}const target2 = require('./target2')${os.EOL}const target3 = require('./target3')${os.EOL}`
+      `const target1 = require('./target1')${os.EOL}const target2 = require('./target2')${os.EOL}const target3 = require('./target3.json')${os.EOL}`
     )
   })
 
@@ -39,7 +39,7 @@ describe('fullPathRequire function', () => {
       pos: 0
     })
     expect(editor.getText()).toBe(
-      `import target1 from './target1'${os.EOL}import target2 from './target2'${os.EOL}import target3 from './target3'${os.EOL}`
+      `import target1 from './target1'${os.EOL}import target2 from './target2'${os.EOL}import target3 from './target3.json'${os.EOL}`
     )
   })
 })

@@ -4,7 +4,7 @@
     "title": "Omit file extensions",
     "description": "Omit the extension from the require path for the following file types:",
     "type": "array",
-    "default": ["js", "jsx", "json"]
+    "default": ["js", "jsx"]
   },
   "excludeDirs": {
     "order": 2,
