@@ -40,16 +40,4 @@ describe('fullPathRequire function', () => {
       `import target1 from './target1'${os.EOL}import target2 from './target2'${os.EOL}import target3 from './target3'${os.EOL}`
     )
   })
-
-  it('should inject the correct statments for files with a valid extension', () => {
-    fullPathRequire(editor, [
-      path.join(projectPath, 'target1.cson'),
-      path.join(projectPath, 'target2.coffee'),
-      path.join(projectPath, 'target3.py')
-    ], {
-      type: 'import',
-      pos: 0
-    })
-    expect(editor.getText()).toBe('')
-  })
 })

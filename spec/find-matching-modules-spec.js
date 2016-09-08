@@ -11,6 +11,7 @@ describe('findMatchingModules function', () => {
           path.join(projectPath, 'foo-bar.js'),
           path.join(projectPath, 'a', 'foo-bar.jsx'),
           path.join(projectPath, 'a', 'foo-bar.json'),
+          path.join(projectPath, 'a', 'foo-bar.html'),
           path.join(projectPath, 'a', 'b', 'foo-bar.js'),
           path.join(projectPath, 'a', 'b', 'fooBar.js'),
           path.join(projectPath, 'a', 'b', 'foo_bar.js')
@@ -26,6 +27,7 @@ describe('findMatchingModules function', () => {
           path.join(projectPath, 'bar-baz.js'),
           path.join(projectPath, 'a', 'foo-bar.jsx'),
           path.join(projectPath, 'a', 'foo-bar.json'),
+          path.join(projectPath, 'a', 'foo-bar.html'),
           path.join(projectPath, 'a', 'b', 'foo-bar.js'),
           path.join(projectPath, 'a', 'b', 'fooBar.js'),
           path.join(projectPath, 'a', 'b', 'foo_bar.js')

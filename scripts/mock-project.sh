@@ -9,7 +9,7 @@ touch mock-project/walk/foo-bar.js
 touch mock-project/walk/bar-baz.js
 touch mock-project/walk/a/foo-bar.jsx
 touch mock-project/walk/a/foo-bar.json
-touch mock-project/walk/a/foo-bar.py
+touch mock-project/walk/a/foo-bar.html
 touch mock-project/walk/a/b/foo-bar.js
 touch mock-project/walk/a/b/fooBar.js
 touch mock-project/walk/a/b/foo_bar.js
