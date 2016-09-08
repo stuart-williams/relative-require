@@ -1,5 +1,11 @@
+const config = require('../config')
+
 describe('pathToStatement function', () => {
   const convert = require('../lib/path-to-statement').pathToStatement
+
+  beforeEach(() => {
+    atom.config.set('relative-require.omitExtensions', config.omitExtensions.default)
+  })
 
   describe('with type `require`', () => {
     it('should create the expected relative require statement', () => {
@@ -26,6 +32,10 @@ describe('pathToStatement function', () => {
 
 describe('pathsToStatements function', () => {
   const convert = require('../lib/path-to-statement').pathsToStatements
+
+  beforeEach(() => {
+    atom.config.set('relative-require.omitExtensions', config.omitExtensions.default)
+  })
 
   it('should dedupe modules with the same path after removal of extension', () => {
     expect(convert('require', '/foo', [ '/foo/bar.js', '/foo/bar.json', '/foo/baz.js' ])).toEqual([

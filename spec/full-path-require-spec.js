@@ -2,12 +2,14 @@ const path = require('path')
 const os = require('os')
 const mockProjectPath = require('./helpers/mock-project-path')
 const fullPathRequire = require('../lib/full-path-require')
+const config = require('../config')
 const projectPath = path.join(mockProjectPath, 'editor')
 
 describe('fullPathRequire function', () => {
   let editor = null
 
   beforeEach(() => {
+    atom.config.set('relative-require.omitExtensions', config.omitExtensions.default)
     waitsForPromise(() => atom.workspace.open(path.join(projectPath, 'active.js')).then((e) => {
       editor = e
     }))

@@ -2,6 +2,7 @@ const path = require('path')
 const os = require('os')
 const textEditorRequire = require('../lib/text-editor-require')
 const mockProjectPath = require('./helpers/mock-project-path')
+const config = require('../config')
 const projectPath = path.join(mockProjectPath, 'editor')
 
 describe('textEditorRequire function', () => {
@@ -10,6 +11,7 @@ describe('textEditorRequire function', () => {
   let editor = null
 
   beforeEach(() => {
+    atom.config.set('relative-require.omitExtensions', config.omitExtensions.default)
     waitsForPromise(() => atom.workspace.open(path.join(projectPath, 'active.js')).then((e) => {
       editor = e
     }))
