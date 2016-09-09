@@ -21,6 +21,8 @@ script:
   - sh scripts/mock-project.sh
   - 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
 
+after_success: coveralls
+
 # Needed to disable the auto-install step running `npm install`
 install: true
 
@@ -45,5 +47,3 @@ addons:
     - git
     - libgnome-keyring-dev
     - fakeroot
-
-after_success: coveralls
