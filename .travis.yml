@@ -46,5 +46,4 @@ addons:
     - libgnome-keyring-dev
     - fakeroot
 
-after_success:
-  - coveralls
+after_success: coveralls
