@@ -6,7 +6,9 @@
   "keywords": [
     "javascript",
     "relative",
-    "require"
+    "require",
+    "import",
+    "module"
   ],
   "author": "Stuart Williams <stuwilliams47@gmail.com>",
   "license": "MIT",
