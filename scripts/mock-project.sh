@@ -5,6 +5,10 @@ touch mock-project/package.json
 echo '{"dependencies":{"foo":"0.0.1", "bar":"0.0.2", "baz":"0.0.3"}, "devDependencies": {"fooBar": "0.0.1"}}' >> mock-project/package.json
 
 mkdir -p mock-project/walk/a/b
+mkdir -p mock-project/walk/.hidden
+mkdir -p mock-project/walk/node_modules
+touch mock-project/walk/.hidden/a.js
+touch mock-project/walk/node_modules/a.js
 touch mock-project/walk/foo-bar.js
 touch mock-project/walk/bar-baz.js
 touch mock-project/walk/a/foo-bar.jsx

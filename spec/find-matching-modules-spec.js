@@ -39,4 +39,11 @@ describe('findMatchingModules function', () => {
         ].sort())
       }))
   })
+
+  it('should ignore excluded directories', () => {
+    waitsForPromise(() =>
+      findMatchingModules(projectPath, ['a']).then((modules) => {
+        expect(modules).toEqual([])
+      }))
+  })
 })

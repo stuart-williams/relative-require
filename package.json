@@ -26,7 +26,8 @@
     "builtin-modules": "^1.1.1",
     "lodash": "^4.15.0",
     "q": "^1.4.1",
-    "ramda": "^0.22.1"
+    "ramda": "^0.22.1",
+    "walkdir": "0.0.11"
   },
   "devDependencies": {
     "del-cli": "^0.2.0",
