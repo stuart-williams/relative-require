@@ -1,7 +1,7 @@
 const config = require('../config')
 
 describe('pathToStatement function', () => {
-  const convert = require('../lib/path-to-statement').pathToStatement
+  const convert = require('../lib/statement-helpers').pathToStatement
 
   beforeEach(() => {
     atom.config.set('relative-require.omitExtensions', config.omitExtensions.default)
@@ -31,7 +31,7 @@ describe('pathToStatement function', () => {
 })
 
 describe('pathsToStatements function', () => {
-  const convert = require('../lib/path-to-statement').pathsToStatements
+  const convert = require('../lib/statement-helpers').pathsToStatements
 
   beforeEach(() => {
     atom.config.set('relative-require.omitExtensions', config.omitExtensions.default)
