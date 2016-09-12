@@ -30,4 +30,13 @@ describe('findMatchingModules function', () => {
         expect(modules).toEqual([])
       }))
   })
+
+  it('should match a directory if it contains an index file', () => {
+    waitsForPromise(() =>
+      findMatchingModules(projectPath, 'contains-index').then((modules) => {
+        expect(modules).toEqual([
+          path.join(projectPath, 'contains-index', 'index.js')
+        ])
+      }))
+  })
 })

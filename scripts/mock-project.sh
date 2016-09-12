@@ -7,9 +7,11 @@ echo '{"dependencies":{"foo":"0.0.1", "bar":"0.0.2", "baz":"0.0.3"}, "devDepende
 mkdir -p mock-project/walk/a/b
 mkdir -p mock-project/walk/.hidden
 mkdir -p mock-project/walk/node_modules
+mkdir -p mock-project/walk/contains-index
 touch mock-project/walk/.hidden/a.js
 touch mock-project/walk/node_modules/a.js
 touch mock-project/walk/foo-bar.js
+touch mock-project/walk/contains-index/index.js
 touch mock-project/walk/a/foo-bar.jsx
 touch mock-project/walk/a/foo-bar.json
 touch mock-project/walk/a/foo-bar.html
