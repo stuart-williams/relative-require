@@ -10,7 +10,6 @@ mkdir -p mock-project/walk/node_modules
 touch mock-project/walk/.hidden/a.js
 touch mock-project/walk/node_modules/a.js
 touch mock-project/walk/foo-bar.js
-touch mock-project/walk/bar-baz.js
 touch mock-project/walk/a/foo-bar.jsx
 touch mock-project/walk/a/foo-bar.json
 touch mock-project/walk/a/foo-bar.html
