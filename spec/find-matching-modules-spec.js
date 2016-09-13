@@ -6,6 +6,7 @@ const projectPath = path.join(mockProjectPath, 'walk')
 
 describe('findMatchingModules function', () => {
   beforeEach(() => {
+    atom.config.set('relative-require.omitExtensions', config.omitExtensions.default)
     atom.config.set('relative-require.excludeDirs', config.excludeDirs.default)
   })
 
@@ -37,6 +38,13 @@ describe('findMatchingModules function', () => {
         expect(modules).toEqual([
           path.join(projectPath, 'contains-index', 'index.js')
         ])
+      }))
+  })
+
+  it('should not match a directory if the index file extension is in the omitExtensions config', () => {
+    waitsForPromise(() =>
+      findMatchingModules(projectPath, 'contains-bad-index').then((modules) => {
+        expect(modules).toEqual([])
       }))
   })
 })

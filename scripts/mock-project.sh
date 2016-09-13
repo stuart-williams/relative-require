@@ -8,10 +8,12 @@ mkdir -p mock-project/walk/a/b
 mkdir -p mock-project/walk/.hidden
 mkdir -p mock-project/walk/node_modules
 mkdir -p mock-project/walk/contains-index
+mkdir -p mock-project/walk/contains-bad-index
 touch mock-project/walk/.hidden/a.js
 touch mock-project/walk/node_modules/a.js
 touch mock-project/walk/foo-bar.js
 touch mock-project/walk/contains-index/index.js
+touch mock-project/walk/contains-bad-index/index.html
 touch mock-project/walk/a/foo-bar.jsx
 touch mock-project/walk/a/foo-bar.json
 touch mock-project/walk/a/foo-bar.html
