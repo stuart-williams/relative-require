@@ -28,6 +28,11 @@ describe('pathToStatement function', () => {
       expect(convert('import', '/foo')('/foo/bar-baz.js')).toBe('import barBaz from \'./bar-baz\'')
     })
   })
+
+  it('should create the correct import statements for index files', () => {
+    expect(convert('import', '/foo')('/bar/index.js')).toBe('import bar from \'../bar\'')
+    expect(convert('import', '/foo')('/bar/index.html')).toBe('import index from \'../bar/index.html\'')
+  })
 })
 
 describe('pathsToStatements function', () => {
