@@ -28,3 +28,10 @@ Injects module require statements with the correct relative require path
 * Infers the import statement syntax (`require` or `import`) from the active file contents
 * Drag and drop from tree view
 * Right click a file in the tree view to import
+
+## Configuration
+
+| Option               |      Defaults                              | Description                                                   |
+|----------------------|--------------------------------------------|---------------------------------------------------------------|
+| Omit File Extensions | "js", "jsx"                                | Omit the extension from the require path for these file types |
+| Exclude Directories  | "^\\.", "node_modules", "bower_components" | Exclude these directories from the module search              |
